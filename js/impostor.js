@@ -12,7 +12,7 @@ class Impostor {
             x: this.gameSize.w - this.gameSize.w / 4,
             y: this.gameSize.h / 2,
         };
-        this.imSize = { w: this.gameSize.w / , h: this.gameSize.h / 2 };
+        this.imSize = { w: this.gameSize.w / 4, h: this.gameSize.h / 2 };
         this.drawImLiveSize = { w: this.gameSize.w / 4, h: 30 };
 
         this.vel = { x: 100, y: 160 };

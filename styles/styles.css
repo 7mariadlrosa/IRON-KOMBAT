@@ -4,13 +4,15 @@ body {
 }
 
 #game-board {
+    display: flex;
     float: center;
-    padding: 20px 0px;
+    padding: 10px 0px;
+    justify-content: space-between;
 }
 
 .game-intro {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     float: center;
     padding: 0% 10%;
     padding-top: 30px;
@@ -22,22 +24,30 @@ body {
 }
 
 .logo-img {
-    width: 350px;
-}
-
-.arrows-img {
     width: 150px;
 }
 
+#instrucciones {
+width: 650px;
+}
+
+.arrows-img {
+    padding: 0px 100px;
+    width: 400px;
+}
+
 body button {
+    width: 400px;
+    height: 200px;
     font-size: 30px;
-    background-color: rgb(147, 58, 58);
-    color: #fff;
-    padding: 20px 40px;
+    background-image: url("../img/BOTON.jpg");
+    background-repeat: no-repeat;
+    padding: 0px 20px;
     border: 0;
     box-shadow: 0;
     border-radius: 5px;
     margin-bottom: 20px;
+    
 }
 
 .background {

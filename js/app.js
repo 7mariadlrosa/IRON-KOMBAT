@@ -36,6 +36,7 @@ const controlledApp = {
         this.canvasNode = document.querySelector(`#${canvasID}`);
         this.ctx = this.canvasNode.getContext("2d");
         this.loadLifeImages()
+        this.loadVersus()
         this.loadLifeImImages()
         this.setDimensions();
         this.createAll();
@@ -44,7 +45,25 @@ const controlledApp = {
         this.start();
     },
 
+    loadVersus() {
+        this.versusInstance = new Image()
+        this.versusInstance.src = "../img/VS.png"
+    },
+
+    drawVersus() {
+        this.ctx.drawImage(
+            this.versusInstance,
+            this.gameSize.w / 2 - 330,
+            0,
+            650,
+        250,
+        )
+    },
+
+
     loadLifeImages() {
+
+
         this.lifeImage100 = new Image()
         this.lifeImage100.src = './img/10V.png'
 
@@ -77,7 +96,7 @@ const controlledApp = {
 
         this.lifeImage0 = new Image()
         this.lifeImage0.src = './img/0V.png'
-        
+
     },
 
     loadLifeImImages() {
@@ -113,7 +132,7 @@ const controlledApp = {
 
         this.lifeImImage0 = new Image()
         this.lifeImImage0.src = './img/0VI.png'
-     },
+    },
 
 
     setDimensions() {
@@ -174,6 +193,8 @@ const controlledApp = {
 
     },
 
+
+
     createBackground() {
         this.background = new Background(this.ctx, this.posBack, this.gameSize);
     },
@@ -213,6 +234,7 @@ const controlledApp = {
         this.drawWin()
         this.drawLife()
         this.drawLifeIm()
+        this.drawVersus()
     },
 
     createLife() {
@@ -296,7 +318,7 @@ const controlledApp = {
         if (this.impostor.life > 10) {
             this.lifeIm.draw(this.lifeImImage20)
         }
-      
+
     },
 
 
